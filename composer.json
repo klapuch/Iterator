@@ -1,6 +1,6 @@
 {
 	"name": "klapuch/iterator",
-	"description": "Iterators for array_map and array_filter",
+	"description": "Iterators replacing array functions",
 	"type": "library",
 	"homepage": "https://www.github.com/klapuch/Iterator",
 	"authors": [
