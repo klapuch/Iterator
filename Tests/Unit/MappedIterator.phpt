@@ -6,9 +6,9 @@ declare(strict_types = 1);
  */
 namespace Klapuch\Iterator\Unit;
 
+use Klapuch\Iterator;
 use Tester;
 use Tester\Assert;
-use Klapuch\Iterator;
 
 require __DIR__ . '/../bootstrap.php';
 

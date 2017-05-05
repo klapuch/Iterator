@@ -13,6 +13,9 @@ final class MappedIterator extends \IteratorIterator {
 		$this->callback = $callback;
 	}
 
+	/**
+	 * @return mixed
+	 */
 	public function current() {
 		return call_user_func($this->callback, parent::current());
 	}
