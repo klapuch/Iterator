@@ -12,13 +12,13 @@ use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
 
-final class MappedIterator extends Tester\TestCase {
+final class Mapped extends Tester\TestCase {
 	public function testAnonymousCallbackFunction() {
 		$iterator = new \ArrayIterator(['a', 'bb', 'ccc']);
 		Assert::same(
 			['aX', 'bbX', 'cccX'],
 			iterator_to_array(
-				new Iterator\MappedIterator(
+				new Iterator\Mapped(
 					$iterator,
 					function(string $value): string {
 						return $value . 'X';
@@ -37,7 +37,7 @@ final class MappedIterator extends Tester\TestCase {
 		};
 		Assert::same(
 			['aX', 'bbX', 'cccX'],
-			iterator_to_array(new Iterator\MappedIterator($iterator, [$object, 'map']))
+			iterator_to_array(new Iterator\Mapped($iterator, [$object, 'map']))
 		);
 	}
 
@@ -45,10 +45,10 @@ final class MappedIterator extends Tester\TestCase {
 		$iterator = new \ArrayIterator(['a', 'bb', 'ccc']);
 		Assert::same(
 			['A', 'BB', 'CCC'],
-			iterator_to_array(new Iterator\MappedIterator($iterator, 'strtoupper'))
+			iterator_to_array(new Iterator\Mapped($iterator, 'strtoupper'))
 		);
 	}
 }
 
 
-(new MappedIterator())->run();
+(new Mapped())->run();
