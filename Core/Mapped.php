@@ -5,7 +5,7 @@ namespace Klapuch\Iterator;
 /**
  * array_map for iterator
  */
-final class MappedIterator extends \IteratorIterator {
+final class Mapped extends \IteratorIterator {
 	private $callback;
 
 	public function __construct(\Traversable $iterator, callable $callback) {
